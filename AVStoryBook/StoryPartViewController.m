@@ -7,8 +7,12 @@
 //
 
 #import "StoryPartViewController.h"
+@import AVFoundation;
 
 @interface StoryPartViewController ()
+
+@property (nonatomic, strong) AVAudioFile *file;
+@property (nonatomic, strong) AVAudioRecorder *recorder;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;

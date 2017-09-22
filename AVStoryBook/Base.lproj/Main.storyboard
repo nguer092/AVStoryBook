@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,28 +22,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdn-BW-6h9">
-                                <rect key="frame" x="67" y="28" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mdn-BW-6h9">
+                                <rect key="frame" x="16" y="28" width="343" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="FUQ-3W-rOL"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6e-bf-fjM">
-                                <rect key="frame" x="164" y="327" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6e-bf-fjM">
+                                <rect key="frame" x="131" y="318.5" width="113" height="30"/>
+                                <state key="normal" title="Audio Recording"/>
                                 <connections>
                                     <action selector="cameraButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95j-CR-96k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-R0-vqE">
-                                <rect key="frame" x="164" y="413" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-R0-vqE">
+                                <rect key="frame" x="16" y="413" width="343" height="30"/>
+                                <state key="normal" title="Playback Button"/>
                                 <connections>
                                     <action selector="microphoneButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MXI-Da-mrS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9eL-R0-vqE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lw2-3j-SNo"/>
+                            <constraint firstItem="9eL-R0-vqE" firstAttribute="top" secondItem="r6e-bf-fjM" secondAttribute="bottom" constant="64.5" id="bzX-Bx-Eru"/>
+                            <constraint firstItem="Mdn-BW-6h9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="e9e-CF-oJs"/>
+                            <constraint firstItem="Mdn-BW-6h9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="h1o-Yo-xQU"/>
+                            <constraint firstItem="r6e-bf-fjM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ld7-35-Dob"/>
+                            <constraint firstItem="9eL-R0-vqE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="n9W-mi-aqM"/>
+                            <constraint firstItem="r6e-bf-fjM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p8h-g0-9Br"/>
+                            <constraint firstItem="Mdn-BW-6h9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vyD-Uq-h9O"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="r6e-bf-fjM" id="cqJ-nS-aAm"/>
@@ -52,6 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>

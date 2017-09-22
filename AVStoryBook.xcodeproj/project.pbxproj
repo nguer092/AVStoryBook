@@ -13,6 +13,7 @@
 		01D9D5851F7592F600B59080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D9D5841F7592F600B59080 /* Assets.xcassets */; };
 		01D9D5881F7592F600B59080 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D9D5861F7592F600B59080 /* LaunchScreen.storyboard */; };
 		01FB73CD1F759CC40067969F /* StoryPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB73CC1F759CC40067969F /* StoryPartViewController.m */; };
+		01FB73D01F75A01B0067969F /* PageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB73CF1F75A01B0067969F /* PageData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		01D9D5891F7592F600B59080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01FB73CB1F759CC40067969F /* StoryPartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPartViewController.h; sourceTree = "<group>"; };
 		01FB73CC1F759CC40067969F /* StoryPartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPartViewController.m; sourceTree = "<group>"; };
+		01FB73CE1F75A01B0067969F /* PageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageData.h; sourceTree = "<group>"; };
+		01FB73CF1F75A01B0067969F /* PageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +61,9 @@
 		01D9D5771F7592F600B59080 /* AVStoryBook */ = {
 			isa = PBXGroup;
 			children = (
-				01D9D5811F7592F600B59080 /* Main.storyboard */,
-				01FB73CB1F759CC40067969F /* StoryPartViewController.h */,
-				01FB73CC1F759CC40067969F /* StoryPartViewController.m */,
+				01FB73D31F75A02C0067969F /* Controller */,
+				01FB73D21F75A0260067969F /* View */,
+				01FB73D11F75A0200067969F /* Model */,
 				01D9D5781F7592F600B59080 /* Supporting Files */,
 			);
 			path = AVStoryBook;
@@ -77,6 +80,32 @@
 				01D9D5791F7592F600B59080 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01FB73D11F75A0200067969F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01FB73CE1F75A01B0067969F /* PageData.h */,
+				01FB73CF1F75A01B0067969F /* PageData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		01FB73D21F75A0260067969F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01D9D5811F7592F600B59080 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		01FB73D31F75A02C0067969F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01FB73CB1F759CC40067969F /* StoryPartViewController.h */,
+				01FB73CC1F759CC40067969F /* StoryPartViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FB73D01F75A01B0067969F /* PageData.m in Sources */,
 				01D9D57D1F7592F600B59080 /* AppDelegate.m in Sources */,
 				01D9D57A1F7592F600B59080 /* main.m in Sources */,
 				01FB73CD1F759CC40067969F /* StoryPartViewController.m in Sources */,
