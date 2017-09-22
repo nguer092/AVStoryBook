@@ -34,9 +34,6 @@
     
     // Do any additional setup after loading the view.
     self.imageView.userInteractionEnabled = YES;
-    
-//    PageData *instance = [[PageData alloc] init];
-    
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapper:)];
     [self.imageView addGestureRecognizer:tap];
 }

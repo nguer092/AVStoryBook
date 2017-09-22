@@ -14,6 +14,7 @@
 		01D9D5881F7592F600B59080 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D9D5861F7592F600B59080 /* LaunchScreen.storyboard */; };
 		01FB73CD1F759CC40067969F /* StoryPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB73CC1F759CC40067969F /* StoryPartViewController.m */; };
 		01FB73D01F75A01B0067969F /* PageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB73CF1F75A01B0067969F /* PageData.m */; };
+		01FB73D61F75B72C0067969F /* PageHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB73D51F75B72C0067969F /* PageHandlerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		01FB73CC1F759CC40067969F /* StoryPartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPartViewController.m; sourceTree = "<group>"; };
 		01FB73CE1F75A01B0067969F /* PageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageData.h; sourceTree = "<group>"; };
 		01FB73CF1F75A01B0067969F /* PageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageData.m; sourceTree = "<group>"; };
+		01FB73D41F75B72C0067969F /* PageHandlerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageHandlerViewController.h; sourceTree = "<group>"; };
+		01FB73D51F75B72C0067969F /* PageHandlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageHandlerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				01FB73CB1F759CC40067969F /* StoryPartViewController.h */,
 				01FB73CC1F759CC40067969F /* StoryPartViewController.m */,
+				01FB73D41F75B72C0067969F /* PageHandlerViewController.h */,
+				01FB73D51F75B72C0067969F /* PageHandlerViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FB73D01F75A01B0067969F /* PageData.m in Sources */,
+				01FB73D61F75B72C0067969F /* PageHandlerViewController.m in Sources */,
 				01D9D57D1F7592F600B59080 /* AppDelegate.m in Sources */,
 				01D9D57A1F7592F600B59080 /* main.m in Sources */,
 				01FB73CD1F759CC40067969F /* StoryPartViewController.m in Sources */,
