@@ -14,6 +14,6 @@
 
 @property (nonatomic, strong) UIImage * image;
 @property (nonatomic, strong) AVAudioFile *file;
-@property (nonatomic, strong) AVAudioRecorder *recorder;
+
 
 @end

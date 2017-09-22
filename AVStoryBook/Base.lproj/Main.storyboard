@@ -29,15 +29,15 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6e-bf-fjM">
-                                <rect key="frame" x="131" y="318.5" width="113" height="30"/>
-                                <state key="normal" title="Audio Recording"/>
+                                <rect key="frame" x="136" y="318.5" width="103" height="30"/>
+                                <state key="normal" title="Camera Button"/>
                                 <connections>
                                     <action selector="cameraButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95j-CR-96k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-R0-vqE">
                                 <rect key="frame" x="16" y="413" width="343" height="30"/>
-                                <state key="normal" title="Playback Button"/>
+                                <state key="normal" title="Microphone Button"/>
                                 <connections>
                                     <action selector="microphoneButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MXI-Da-mrS"/>
                                 </connections>

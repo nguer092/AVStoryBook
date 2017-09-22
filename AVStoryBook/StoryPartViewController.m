@@ -7,11 +7,12 @@
 //
 
 #import "StoryPartViewController.h"
+#import "PageData.h"
 @import AVFoundation;
 
 @interface StoryPartViewController ()
 
-@property (nonatomic, strong) AVAudioFile *file;
+@property (nonatomic, strong) AVAudioPlayer *audio;
 @property (nonatomic, strong) AVAudioRecorder *recorder;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    PageData *instance = [[PageData alloc] init];
 }
 
 - (IBAction)cameraButtonClicked:(id)sender {
