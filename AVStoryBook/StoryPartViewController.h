@@ -10,4 +10,6 @@
 
 @interface StoryPartViewController : UIViewController
 
+@property (assign, nonatomic) NSUInteger pageIndex;
+
 @end

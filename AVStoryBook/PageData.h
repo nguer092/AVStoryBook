@@ -14,6 +14,10 @@
 
 @property (nonatomic, strong) UIImage * image;
 @property (nonatomic,strong) NSURL *audioFileURL;
+@property (nonatomic, strong) AVAudioPlayer *audio;
+@property (nonatomic, strong) AVAudioRecorder *recorder;
+
+
 
 
 @end

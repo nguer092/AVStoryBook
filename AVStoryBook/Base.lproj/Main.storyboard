@@ -13,7 +13,7 @@
         <!--Story Part View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StoryPartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoryPartVC" id="BYZ-38-t0r" customClass="StoryPartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -68,7 +68,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="XFH-89-B1F"/>
             </objects>
-            <point key="canvasLocation" x="164" y="16"/>
+            <point key="canvasLocation" x="156" y="16"/>
         </scene>
         <!--Page Handler View Controller-->
         <scene sceneID="uTY-2e-ZN9">

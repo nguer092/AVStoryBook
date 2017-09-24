@@ -8,55 +8,57 @@
 
 #import "StoryPartViewController.h"
 #import "PageData.h"
-@import AVFoundation;
 
-@interface StoryPartViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-
-@property (nonatomic, strong) AVAudioPlayer *audio;
-@property (nonatomic, strong) AVAudioRecorder *recorder;
-@property (nonatomic,strong) NSURL *audioFileURL;
+@interface StoryPartViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 @property (weak, nonatomic) IBOutlet UIButton *microphoneButton;
+@property (nonatomic, strong) PageData *pageData;
 
 @end
 
 @implementation StoryPartViewController
+
+- (void)setPageIndex:(NSUInteger)pageIndex
+{
+    _pageIndex = pageIndex;
+    self.pageData = [[PageData alloc] init];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     
-    self.audioFileURL = [[NSURL URLWithString:docPath]
+    self.pageData.audioFileURL = [[NSURL URLWithString:docPath]
                          URLByAppendingPathComponent:@"recording.m4a"];
     
     // Do any additional setup after loading the view.
-    self.imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapper:)];
     [self.imageView addGestureRecognizer:tap];
+    self.imageView.userInteractionEnabled = YES;
 }
 
 #pragma mark Gesture Recognizer
 
 -(void)tapper:(UITapGestureRecognizer *)sender{
     
-    if ([self.audio isPlaying]) {
-        [self.audio stop];
+    if ([self.pageData.audio isPlaying]) {
+        [self.pageData.audio stop];
         return;
     }
     
     NSError *err = nil;
-    self.audio = [[AVAudioPlayer alloc]
-                   initWithContentsOfURL:self.audioFileURL
+    self.pageData.audio = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:self.pageData.audioFileURL
                    error:&err];
     if (err != nil) {
         NSLog(@"Error creating player: %@", err.localizedDescription);
         abort();
     }
     
-    [self.audio play];
+    [self.pageData.audio play];
     
 }
 
@@ -96,16 +98,16 @@
 #pragma mark Microphone Button - Record Audio
 
 - (IBAction)microphoneButtonClicked:(id)sender {
-    if ([self.recorder isRecording]) {
-        [self.recorder stop];
+    if ([self.pageData.recorder isRecording]) {
+        [self.pageData.recorder stop];
         [sender setTitle:@"Record" forState:UIControlStateNormal];
         return;
     }
     [sender setTitle:@"Stop" forState:UIControlStateNormal];
     
     NSError *err = nil;
-    self.recorder = [[AVAudioRecorder alloc]
-                     initWithURL:self.audioFileURL
+    self.pageData.recorder = [[AVAudioRecorder alloc]
+                     initWithURL:self.pageData.audioFileURL
                      settings:@{AVFormatIDKey: @(kAudioFormatMPEG4AAC),
                                 AVNumberOfChannelsKey: @(2),
                                 AVSampleRateKey: @(44100)}
@@ -114,7 +116,7 @@
         NSLog(@"Error creating recorder: %@", err.localizedDescription);
         abort();
     }
-    [self.recorder record];
+    [self.pageData.recorder record];
 }
 
 @end
