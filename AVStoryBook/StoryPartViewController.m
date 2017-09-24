@@ -34,7 +34,7 @@
     self.pageData.audioFileURL = [[NSURL URLWithString:docPath]
                          URLByAppendingPathComponent:@"recording.m4a"];
     
-    // Do any additional setup after loading the view.
+    
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapper:)];
     [self.imageView addGestureRecognizer:tap];
     self.imageView.userInteractionEnabled = YES;
@@ -85,7 +85,7 @@
     }];
 }
 
-//UIImagePickerControllerDelegate
+#pragma mark UIImagePickerController Delegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
@@ -103,6 +103,7 @@
         [sender setTitle:@"Record" forState:UIControlStateNormal];
         return;
     }
+    
     [sender setTitle:@"Stop" forState:UIControlStateNormal];
     
     NSError *err = nil;
@@ -116,6 +117,7 @@
         NSLog(@"Error creating recorder: %@", err.localizedDescription);
         abort();
     }
+    
     [self.pageData.recorder record];
 }
 

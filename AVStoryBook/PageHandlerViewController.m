@@ -26,12 +26,13 @@
     self.currentPage = 0;
     self.pagesDeleted = 0;
     self.pages = [@[] mutableCopy];
+    
     StoryPartViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"StoryPartVC"];
     view.pageIndex = self.pages.count;
     
     [self.pages addObject:view];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"Page #1"];
+    self.navigationItem.title = [NSString stringWithFormat:@"Page 1"];
     [self setViewControllers:@[view] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }
 
@@ -47,7 +48,7 @@
         }
         
         NSInteger nextIndex = currentIndex + 1;
-        self.navigationItem.title = [NSString stringWithFormat:@"Page #%lu", nextIndex + 1];
+        self.navigationItem.title = [NSString stringWithFormat:@"Page %lu", nextIndex + 1];
         self.currentPage = nextIndex;
         return self.pages[nextIndex];
     }
@@ -57,7 +58,7 @@
         NSInteger currentIndex = [self.pages indexOfObject:viewController];
         NSInteger prevIndex = (currentIndex - 1) % self.pages.count;
         
-        self.navigationItem.title = [NSString stringWithFormat:@"Page #%lu", prevIndex + 1];
+        self.navigationItem.title = [NSString stringWithFormat:@"Page %lu", prevIndex + 1];
         self.currentPage = prevIndex;
         return self.pages[prevIndex];
     }
